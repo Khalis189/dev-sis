@@ -15,7 +15,7 @@ html {
 
 body {
   width: 100%;
-  max-width: var(--iphone-12-pro-width);
+  max-width: 100%;
   min-height: 100vh;
   margin: 0 auto;
   position: relative;
@@ -43,8 +43,8 @@ body {
 .section-four, .section-five, .section-six,
 .section-seven, .section-eight, .section-nine,
 .section-ten, .section-eleven {
-  width: var(--iphone-12-pro-width);
-  min-height: var(--iphone-12-pro-height);
+  width: 100%;
+  min-height: 100vh;
   max-width: 100%;
 }
 
@@ -91,12 +91,12 @@ body {
 /* Responsive width control */
 @media screen and (min-width: 391px) {
   #viewport-container {
-    width: 390px;
+    width: 100%;
     margin: 0 auto;
   }
   
   .intro {
-    width: 390px;
+    width: 100%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -204,7 +204,7 @@ body, html {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: black;
+  color: black !important;
   z-index: 2;
   width: 100%;
 }
@@ -215,6 +215,7 @@ body, html {
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: black !important;
 }
 
 .wedding-title h1 {
@@ -223,11 +224,13 @@ body, html {
   font-weight: 300;
   line-height: 1.2;
   margin-bottom: 20px;
+  color: black !important;
 }
 
 .wedding-title h1 .name {
   font-size: 96px;
   display: inline-block;
+  color: black !important;
 }
 
 .wedding-title h1 .ampersand {
@@ -235,6 +238,7 @@ body, html {
   display: inline-block;
   vertical-align: middle;
   font-weight: normal;
+  color: black !important;
 }
 
 .wedding-title h1 .name {
@@ -1101,7 +1105,7 @@ body, html {
     font-style: italic;
     font-weight: 300;
     font-size: 20px;
-    color: white;
+    color: black !important;
     margin-top: 30px;
   }
 }
@@ -1134,7 +1138,7 @@ body, html {
     font-style: italic;
     font-weight: 300;
     font-size: 24px;
-    color: black;
+    color: black !important;
     margin-top: 40px;
   }
 }
@@ -1158,6 +1162,7 @@ body, html {
   .love-story-destiny {
     font-size: 20px;
     margin-top: 30px;
+    color: black !important;
   }
 }
 
@@ -2049,5 +2054,155 @@ body, html {
 
   .time-box span {
     font-size: 24px;
+  }
+}
+
+/* Laptop/Desktop specific styles */
+@media screen and (min-width: 1024px) {
+  .wedding-title h1 .name {
+    font-size: 72px;
+  }
+
+  .wedding-title h1 .ampersand {
+    font-size: 24px;
+  }
+
+  .wedding-title h3 {
+    font-size: 18px;
+  }
+
+  .date-content {
+    margin-top: 60vh;
+    padding: 30px;
+  }
+
+  .wedding-date {
+    font-size: 20px;
+  }
+
+  .wedding-location {
+    font-size: 16px;
+  }
+
+  .ornament-divider {
+    width: 200px;
+    height: 80px;
+  }
+
+  .section-two .golden-box {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .section-two .quote {
+    font-size: 16px;
+    padding: 20px;
+  }
+
+  .section-three .fullname {
+    font-size: 28px;
+  }
+
+  .section-three .parents {
+    font-size: 16px;
+  }
+
+  .section-four .event-title .wedding {
+    font-size: 60px;
+  }
+
+  .section-four .wedding-blessing {
+    font-size: 36px;
+  }
+
+  .section-four .event-details {
+    font-size: 16px;
+  }
+
+  .section-five .after-party-title {
+    font-size: 36px;
+  }
+
+  .section-five .after-party-time {
+    font-size: 20px;
+  }
+
+  .section-five .after-party-venue {
+    font-size: 16px;
+  }
+
+  .section-six .section-title {
+    font-size: 28px;
+  }
+
+  .section-six .venue-name {
+    font-size: 20px;
+  }
+
+  .section-six .venue-address {
+    font-size: 14px;
+  }
+
+  .section-seven .love-story-title {
+    font-size: 36px;
+  }
+
+  .section-seven .love-story-quote {
+    font-size: 16px;
+  }
+
+  .section-eight .gallery-caption .couple-name {
+    font-size: 48px;
+  }
+
+  .section-eight .gallery-caption .memories-text {
+    font-size: 16px;
+  }
+
+  .section-nine .rsvp-title {
+    font-size: 36px;
+  }
+
+  .section-nine .bible-quote {
+    font-size: 16px;
+  }
+
+  .section-ten .sign-of-love-title {
+    font-size: 36px;
+  }
+
+  .section-ten .gift-message {
+    font-size: 16px;
+  }
+
+  .section-eleven .thank-you-message {
+    font-size: 16px;
+  }
+
+  .section-eleven .couple-signature {
+    font-size: 20px;
+  }
+
+  /* Adjust viewport container for laptop */
+  #viewport-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  /* Center all sections */
+  .main-page,
+  .section-two,
+  .section-three,
+  .section-four,
+  .section-five,
+  .section-six,
+  .section-seven,
+  .section-eight,
+  .section-nine,
+  .section-ten,
+  .section-eleven {
+    max-width: 800px;
+    margin: 0 auto;
   }
 }
