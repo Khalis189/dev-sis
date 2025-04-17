@@ -1,7 +1,9 @@
-/* Viewport locking untuk iPhone 12 Pro dimensions */
+/* Viewport locking untuk iPhone dimensions */
 :root {
   --iphone-12-pro-width: 390px;
   --iphone-12-pro-height: 844px;
+  --iphone-se-width: 375px;
+  --iphone-se-height: 667px;
 }
 
 html {
@@ -12,8 +14,9 @@ html {
 }
 
 body {
-  width: var(--iphone-12-pro-width);
-  min-height: var(--iphone-12-pro-height);
+  width: 100%;
+  max-width: var(--iphone-12-pro-width);
+  min-height: 100vh;
   margin: 0 auto;
   position: relative;
   overflow-x: hidden;
@@ -164,8 +167,8 @@ body, html {
 .main-page {
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
   opacity: 0;
   pointer-events: none;
@@ -179,7 +182,7 @@ body, html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 50%;
+  height: 65vh;
   background-image: url('2.jpg');
   background-size: cover;
   background-position: center;
@@ -197,7 +200,7 @@ body, html {
 
 .wedding-title {
   position: absolute;
-  top: 30%; /* ubah dari 20% jadi 35% */
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -222,6 +225,11 @@ body, html {
   margin-bottom: 20px;
 }
 
+.wedding-title h1 .name {
+  font-size: 96px;
+  display: inline-block;
+}
+
 .wedding-title h1 .ampersand {
   font-size: 28px;
   display: inline-block;
@@ -230,7 +238,7 @@ body, html {
 }
 
 .wedding-title h1 .name {
-  font-size: 96px; /* jauh lebih besar */
+  font-size: 96px;
   display: inline-block;
 }
 
@@ -243,10 +251,17 @@ body, html {
   text-transform: uppercase;
 }
 
+.wedding-location {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 15px;
+}
+
 .ornament-divider {
   width: 240px;
   height: 90px;
-  margin: 0 auto;
+  margin: 10px auto;
   background-image: url('ornament.png');
   background-repeat: no-repeat;
   background-size: contain;
@@ -271,13 +286,13 @@ body, html {
 }
 
 .date-content {
-  position: relative; /* dibutuhkan agar posisi absolut anak-anaknya relatif terhadap box ini */
-  margin-top: 33vh;
+  position: relative;
+  margin-top: 65vh;
   background: rgba(0, 0, 0, 0.9);
   padding: 40px;
   text-align: center;
   width: 100%;
-  overflow: hidden; /* jaga-jaga supaya tidak keluar dari box */
+  overflow: hidden;
 }
 
 .ornament-corner {
@@ -299,11 +314,7 @@ body, html {
 }
 
 .date-location {
-  margin-top: 20px;
-  font-size: 16px;
-  font-weight: 500;
-  position: relative;
-  color: white;
+  margin-top: 0;
 }
 
 .date-location::after {
@@ -1927,5 +1938,116 @@ body, html {
   .gallery-caption .memories-text {
     font-size: 14px;
     letter-spacing: 3px;
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 375px) {
+  body {
+    max-width: var(--iphone-se-width);
+  }
+
+  .wedding-title h1 .name {
+    font-size: 56px;
+  }
+
+  .wedding-title h1 .ampersand {
+    font-size: 24px;
+    margin: 5px 0;
+  }
+
+  .wedding-title h1 {
+    line-height: 1;
+  }
+
+  .wedding-title h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .date-content {
+    margin-top: 50vh;
+    padding: 30px 20px;
+  }
+
+  .wedding-date {
+    font-size: 18px;
+  }
+
+  .wedding-location {
+    font-size: 16px;
+  }
+
+  .ornament-divider {
+    margin: 10px auto;
+  }
+
+  .ornament-corner {
+    width: 60px;
+  }
+
+  .main-page::before {
+    height: 50vh;
+  }
+
+  .wedding-title {
+    top: 40%;
+  }
+
+  .date-content {
+    margin-top: 50vh;
+  }
+
+  .section-two,
+  .section-three,
+  .section-four,
+  .section-five,
+  .section-six,
+  .section-seven,
+  .section-eight,
+  .section-nine,
+  .section-ten,
+  .section-eleven {
+    min-height: var(--iphone-se-height);
+    padding: 20px;
+  }
+
+  .golden-box {
+    width: 95vw;
+    padding: 15px;
+  }
+
+  .photo-box {
+    max-height: 50%;
+  }
+
+  .quote {
+    font-size: 14px;
+    margin-top: 15px;
+  }
+
+  .profile-photo {
+    height: 90%;
+  }
+
+  .event-title .wedding {
+    font-size: 48px;
+  }
+
+  .wedding-blessing {
+    font-size: 36px;
+  }
+
+  .event-details {
+    font-size: 14px;
+  }
+
+  .time-box {
+    min-width: 70px;
+    padding: 10px;
+  }
+
+  .time-box span {
+    font-size: 24px;
   }
 }
