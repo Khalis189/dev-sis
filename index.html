@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation - Devid & Sisca</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio id="bgMusic" loop>
+    <source src="bg-music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="intro" id="intro">
+    <div class="intro-content">
+      <h3>THE WEDDING OF</h3>
+      <h1>DEVID & SISCA</h1>
+      <p>To the honorable<br />Mr./Mrs./Ms./Sir</p>
+      <button onclick="openInvitation()">Open Invitation</button>
+    </div>
+  </div>
+  
+  <div class="main-page" id="mainPage">
+    <div class="main-content">
+      <div class="wedding-title">
+        <h3>The Wedding Of</h3>
+        <h1><span class="name">Devid</span><br><span class="ampersand">&</span><br><span class="name">Sisca</span></h1>
+      </div>
+      <div class="date-content">
+        <img src="ornament-left.png" class="ornament-corner left" alt="Ornament Left" />
+        <img src="ornament-right.png" class="ornament-corner right" alt="Ornament Right" />
+        <div class="date-location">
+          <div class="ornament-divider top"></div>
+          <div class="wedding-date">MAY 2<sup>nd</sup>, 2025</div>      
+          <div class="ornament-divider bottom"></div>
+          <div class="wedding-location">Sentul Highland Golf Club</div>
+        </div>          
+      </div>
+    </div>
+  </div>
+
+  <div class="section-two">
+    <div class="golden-box">
+      <img src="3.JPG" alt="Couple Photo" class="photo-box">
+      <p class="quote">
+        God makes everything beautiful in His time:<br>
+        beautiful when He brings us together,<br>
+        beautiful when He grows love,<br>
+        and love when He unites us in the bonds of holy marriage.
+      </p>
+    </div>
+  </div>
+
+  <!-- Ornamen pojok bawah layar -->
+  <img src="ornament-left-bottom.png" class="screen-ornament left" alt="Left Ornament">
+  <img src="ornament-right-bottom.png" class="screen-ornament right" alt="Right Ornament">
+  
+  <!-- Halaman Mempelai Pria -->
+<div class="section-three groom fade-in">
+  <div class="top-message">
+    By the grace of God, we are pleased to announce our wedding to you; our family and friends.
+  </div>
+  <div class="photo-area">
+    <img src="4.JPG" alt="Groom Photo" class="profile-photo">
+  </div>
+  <div class="info-box">
+    <h2 class="fullname">DEVID LUKMAN</h2>
+    <div class="ornament-divider center"></div>
+    <p class="parents">The son of Mr. Tjong Hon Woen and <span class="cross">†</span> Mrs. Tjai Sui Ngo</p>
+    <img src="ornament-left.png" alt="Ornament" class="corner-ornament left">
+  </div>
+</div>
+
+<!-- Halaman Mempelai Wanita -->
+<div class="section-three bride fade-in">
+  <div class="top-message">
+    By the grace of God, we are pleased to announce our wedding to you; our family and friends.
+  </div>
+  <div class="photo-area">
+    <img src="5.JPG" alt="Bride Photo" class="profile-photo">
+  </div>
+  <div class="info-box">
+    <h2 class="fullname">SISCA ELIZABETH</h2>
+    <div class="ornament-divider center"></div>
+    <p class="parents">The daughter of Mr. John Doe and <span class="cross">†</span> Mrs. Jane Doe</p>
+    <img src="ornament-right.png" alt="Ornament" class="corner-ornament right">
+  </div>
+</div>
+
+<div class="section-four">
+  <img src="ornament-right-bottom.png" class="ornament-corner bottom-right" alt="Bottom Right Ornament">
+  <img src="ornament-left-bottom.png" class="ornament-corner bottom-left" alt="Bottom Left Ornament">
+  
+  <div class="event-title">
+    <span class="the">The</span>
+    <span class="wedding">WEDDING</span>
+    <span class="event">Event</span>
+  </div>
+
+  <div class="wedding-blessing">WEDDING BLESSING</div>
+
+  <div class="event-details">
+    <div class="date-time">Friday, May 2nd, 2025<br>At 4 PM</div>
+    <div class="venue">Sentul Highlands Golf Club</div>
+    <div class="address">Jl. Pakuan, Cijayanti kec. babakan Madang, Kabupaten Bogor - 16810</div>
+  </div>
+
+  <div class="countdown">
+    <div class="countdown-box">
+      <div class="time-box">
+        <span id="days">00</span>
+        <span class="label">Days</span>
+      </div>
+      <span class="separator">:</span>
+      <div class="time-box">
+        <span id="hours">00</span>
+        <span class="label">Hours</span>
+      </div>
+      <span class="separator">:</span>
+      <div class="time-box">
+        <span id="minutes">00</span>
+        <span class="label">Minutes</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="reception-title">WEDDING RECEPTION</div>
+
+  <div class="event-details">
+    <div class="date-time">Friday, May 2nd, 2025<br>At 6.30 PM</div>
+    <div class="venue">Sentul Highlands Golf Club</div>
+    <div class="address">Jl. Pakuan, Cijayanti kec. babakan Madang, Kabupaten Bogor - 16810</div>
+  </div>
+</div>
+
+<div class="section-five">
+  <div class="after-party-content">
+    <h1 class="after-party-title">After party</h1>
+    <div class="after-party-time">AT 9 PM</div>
+    <div class="after-party-venue">FRASER Driving Range & Lounge<br>Sentul Highlands Golf Club</div>
+    <div class="after-party-address">Jl. Pakuan, Cijayanti Kec. Babakan Madang,<br>Kabupaten Bogor - 16810</div>
+  </div>
+</div>
+
+<div class="section-six">
+  <img src="ornament-right-bottom.png" class="ornament-corner bottom-right" alt="Bottom Right Ornament">
+  <img src="ornament-left-bottom.png" class="ornament-corner bottom-left" alt="Bottom Left Ornament">
+  
+  <h2 class="section-title">PLACE AND DATE</h2>
+  
+  <div class="info-container">
+    <div class="info-box">
+      <div class="date-box">
+        <div class="day">Friday</div>
+        <div class="date">2</div>
+        <div class="month-year">May 2025</div>
+      </div>
+      
+      <div class="venue-details">
+        <div class="venue-name">SENTUL HIGHLAND GOLF CLUB</div>
+        <div class="venue-address">Jl. Pakuan, Cijayanti Kec. Babakan Madang, Kabupaten Bogor - 16810</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.0329260000003!2d106.8436!3d-6.5678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMzQnMDQuMSJTIDEwNsKwNTAnMzYuOSJF!5e0!3m2!1sen!2sid!4v1234567890!5m2!1sen!2sid" 
+      width="100%" 
+      height="450" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+<div class="section-seven">
+  <div class="love-story-content">
+    <h1 class="love-story-title">Endless love story</h1>
+    <p class="love-story-quote">I vow to fiercely love you in all your forms, now and forever. I promise to never forget that this is a once-in-a-lifetime love.</p>
+    <p class="love-story-destiny">One love, one heart, one destiny.</p>
+  </div>
+</div>
+
+<div class="section-eight">
+  <div class="photo-gallery">
+    <div class="gallery-row">
+      <div class="gallery-item wide">
+        <img src="10-1.jpg" alt="Gallery Photo 1">
+      </div>
+    </div>
+    <div class="gallery-row">
+      <div class="gallery-item tall">
+        <img src="10-2.jpg" alt="Gallery Photo 2">
+      </div>
+      <div class="gallery-column">
+        <div class="gallery-item">
+          <img src="10-3.jpg" alt="Gallery Photo 3">
+        </div>
+        <div class="gallery-item">
+          <img src="10-4.jpg" alt="Gallery Photo 4">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-nine">
+  <h1 class="rsvp-title">RSVP</h1>
+  
+  <div class="quote-box">
+    <p class="bible-quote">"For this reason a man will leave his father and mother and be united to his wife, and the two will become one flesh. So they are not two but one flesh. Therefore, what God has joined together, let no man separate."</p>
+    <p class="bible-verse">(Matius 19:4-6)</p>
+  </div>
+
+  <p class="rsvp-instruction">Tap button below to confirm attendance</p>
+  
+  <button class="rsvp-button" onclick="openRSVPForm()">Confirm & send greetings</button>
+
+  <img src="ornament-left-bottom.png" class="ornament-corner left" alt="Left Ornament">
+  <img src="ornament-right-bottom.png" class="ornament-corner right" alt="Right Ornament">
+</div>
+
+<!-- RSVP Popup Form -->
+<div class="rsvp-popup" id="rsvpPopup">
+  <div class="rsvp-form-container">
+    <span class="close-button" onclick="closeRSVPForm()">&times;</span>
+    <h2>RSVP Form</h2>
+    <form id="rsvpForm" onsubmit="submitRSVP(event)">
+      <div class="form-group">
+        <label for="name">Nama</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="group">Grup</label>
+        <input type="text" id="group" name="group" required>
+      </div>
+      <div class="form-group">
+        <label for="whatsapp">No WhatsApp</label>
+        <input type="tel" id="whatsapp" name="whatsapp" required>
+      </div>
+      <div class="form-group">
+        <label for="attendance">Kehadiran</label>
+        <select id="attendance" name="attendance" required>
+          <option value="">Pilih Kehadiran</option>
+          <option value="Hadir">Hadir</option>
+          <option value="Tidak Bisa Hadir">Tidak Bisa Hadir</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Komentar / Ucapan</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="submit-button">Kirim</button>
+    </form>
+  </div>
+</div>
+
+<!-- Guest List Section -->
+<div class="guest-list">
+  <h2>Ucapan dari Tamu</h2>
+  <div class="guest-messages" id="guestMessages">
+    <!-- Guest messages will be loaded here -->
+  </div>
+</div>
+
+<div class="section-ten">
+  <h1 class="sign-of-love-title">Sign of Love</h1>
+  
+  <div class="gift-message">
+    <p>Your presence will be the greatest gift for us when we are starting our journey as husband and wife, and we ask for nothing more. Having said that, if you still decide to indulge us, a wishing well has been set up via our bank account.</p>
+    <p>Your generosity is not stipulated, and, yet, well appreciated.</p>
+  </div>
+
+  <div class="bank-accounts">
+    <div class="bank-account">
+      <img src="mandiri-logo.png" alt="Mandiri Logo" class="bank-logo">
+      <div class="account-details">
+        <div class="account-number" data-account="1680002993531">
+          <span>1680002993531</span>
+          <button class="copy-button" onclick="copyAccountNumber(this)">Copy</button>
+        </div>
+        <div class="account-name">a.n TJONG DEVID LUKMAN</div>
+      </div>
+    </div>
+    <div class="bank-account">
+      <img src="bca-logo.png" alt="BCA Logo" class="bank-logo">
+      <div class="account-details">
+        <div class="account-number" data-account="7475148223">
+          <span>7475148223</span>
+          <button class="copy-button" onclick="copyAccountNumber(this)">Copy</button>
+        </div>
+        <div class="account-name">A.N Siska elizbeth febiola</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gift-address-box">
+    <h2>Send gift</h2>
+    <p>We are welcome if you want to send a wedding gift to:</p>
+    <p>Taman Udayana, Jl. Udayana Raya No 38, Babakan Madang, Sentul City, Kab Bogor</p>
+  </div>
+
+  <img src="ornament-right-top.png" class="ornament-corner top-right" alt="Top Right Ornament">
+  <img src="ornament-left-bottom.png" class="ornament-corner bottom-left" alt="Bottom Left Ornament">
+</div>
+
+<div class="section-eleven">
+  <div class="thank-you-content">
+    <p class="thank-you-message">We would like to thank you for sharing in our wedding celebration. We are grateful for your presence, warm wishes, and your generous gift. We look to our future together and to make more memories with you.</p>
+    <p class="couple-signature">With love,<br>Devid & Sisca</p>
+  </div>
+  <div class="watermark">Design by: Chalis Digiwork</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
