@@ -1,3 +1,104 @@
+/* Viewport locking untuk iPhone 12 Pro dimensions */
+:root {
+  --iphone-12-pro-width: 390px;
+  --iphone-12-pro-height: 844px;
+}
+
+html {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+}
+
+body {
+  width: var(--iphone-12-pro-width);
+  min-height: var(--iphone-12-pro-height);
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+/* Wrapper untuk mengontrol viewport */
+#viewport-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+#viewport-container.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mengatur semua section agar sesuai dengan viewport */
+.main-page, .section-two, .section-three,
+.section-four, .section-five, .section-six,
+.section-seven, .section-eight, .section-nine,
+.section-ten, .section-eleven {
+  width: var(--iphone-12-pro-width);
+  min-height: var(--iphone-12-pro-height);
+  max-width: 100%;
+}
+
+/* Intro section styling */
+.intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url('1.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 25vh;
+  z-index: 9999;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+.intro.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Main content container */
+#viewport-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+#viewport-container.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Responsive width control */
+@media screen and (min-width: 391px) {
+  #viewport-container {
+    width: 390px;
+    margin: 0 auto;
+  }
+  
+  .intro {
+    width: 390px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,26 +120,6 @@ body, html {
   font-family: 'Montserrat', sans-serif;
   color: white;
   background-color: black;
-}
-
-.intro, .main-page {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  transition: opacity 1s ease;
-}
-
-.intro {
-  background-image: url('1.jpg');
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  text-align: center;
-  padding-bottom: 25vh;
-  opacity: 1;
-  pointer-events: all;
 }
 
 .intro-content {
@@ -293,7 +374,6 @@ body, html {
   right: 10px;
 }
 
-
 .section-three {
   display: flex;
   flex-direction: column;
@@ -422,8 +502,6 @@ body, html {
   transform: translateY(0);
 }
 
-
-
 @media screen and (max-width: 600px) {
   .main-content h1 .name {
     font-size: 64px; /* juga diperbesar untuk mobile */
@@ -515,6 +593,8 @@ body, html {
   flex-direction: column;
   align-items: center;
   margin-bottom: 40px;
+  position: relative;
+  width: 100%;
 }
 
 .event-title .the {
@@ -523,7 +603,9 @@ body, html {
   font-weight: 300;
   font-size: 24px;
   align-self: flex-start;
-  margin-left: -100px;
+  margin-left: -20px;
+  position: relative;
+  left: 25%;
 }
 
 .event-title .wedding {
@@ -531,6 +613,7 @@ body, html {
   font-size: 72px;
   font-weight: 700;
   margin: 10px 0;
+  text-align: center;
 }
 
 .event-title .event {
@@ -539,7 +622,9 @@ body, html {
   font-weight: 300;
   font-size: 24px;
   align-self: flex-end;
-  margin-right: -100px;
+  margin-right: -20px;
+  position: relative;
+  right: 25%;
 }
 
 .wedding-blessing {
@@ -629,7 +714,8 @@ body, html {
 
   .event-title .the {
     font-size: 18px;
-    margin-left: -50px;
+    margin-left: -10px;
+    left: 20%;
   }
 
   .event-title .wedding {
@@ -638,7 +724,8 @@ body, html {
 
   .event-title .event {
     font-size: 18px;
-    margin-right: -50px;
+    margin-right: -10px;
+    right: 20%;
   }
 
   .wedding-blessing,
@@ -958,7 +1045,6 @@ body, html {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1s ease, transform 1s ease;
-  padding-top: 5vh;
 }
 
 .section-seven.show {
@@ -967,9 +1053,13 @@ body, html {
 }
 
 .love-story-content {
+  position: absolute;
+  top: 15%; /* Memposisikan konten jauh lebih ke atas */
+  left: 50%;
+  transform: translateX(-50%);
   padding: 40px;
   max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .love-story-title {
@@ -978,7 +1068,7 @@ body, html {
   font-weight: 300;
   font-size: 64px;
   color: white;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   letter-spacing: 2px;
 }
 
@@ -987,7 +1077,7 @@ body, html {
   font-size: 18px;
   line-height: 1.6;
   color: white;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -999,31 +1089,28 @@ body, html {
   font-weight: 300;
   font-size: 24px;
   color: black;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 @media screen and (max-width: 600px) {
-  .section-seven {
-    padding-top: 8vh;
-  }
-
   .love-story-content {
+    top: 10%; /* Menyesuaikan untuk layar mobile */
     padding: 20px;
   }
 
   .love-story-title {
     font-size: 48px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   .love-story-quote {
     font-size: 16px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .love-story-destiny {
     font-size: 20px;
-    margin-top: 50px;
+    margin-top: 30px;
   }
 }
 
@@ -1561,6 +1648,8 @@ body, html {
   max-width: 600px;
   border-radius: 15px;
   color: black;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .close-button {
@@ -1622,51 +1711,55 @@ body, html {
   background-color: #333;
 }
 
-.guest-list {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
+/* Guest Messages dalam popup */
+.guest-messages-container {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #ddd;
 }
 
-.guest-list h2 {
+.guest-messages-container h3 {
   font-family: 'Playfair Display', serif;
   text-align: center;
-  margin-bottom: 30px;
-  color: white;
+  margin-bottom: 20px;
+  color: black;
 }
 
 .guest-messages {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 0 10px;
 }
 
 .guest-message {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 20px;
+  background-color: #f8f9fa;
+  padding: 15px;
   border-radius: 10px;
-  color: white;
+  margin-bottom: 15px;
+  border: 1px solid #eee;
 }
 
 .guest-message .name {
   font-family: 'Playfair Display', serif;
-  font-size: 18px;
-  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
 .guest-message .group {
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  opacity: 0.8;
-  margin-bottom: 10px;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 5px;
 }
 
 .guest-message .attendance {
   display: inline-block;
-  padding: 4px 8px;
+  padding: 3px 8px;
   border-radius: 4px;
-  font-size: 12px;
-  margin-bottom: 10px;
+  font-size: 11px;
+  margin-bottom: 8px;
+  color: white;
 }
 
 .guest-message .attendance.hadir {
@@ -1679,19 +1772,33 @@ body, html {
 
 .guest-message .message {
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  line-height: 1.6;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #333;
 }
 
-@media screen and (max-width: 600px) {
-  .rsvp-form-container {
-    margin: 20px auto;
-    padding: 20px;
-  }
+/* Scrollbar styling untuk guest messages */
+.guest-messages::-webkit-scrollbar {
+  width: 6px;
+}
 
-  .guest-messages {
-    grid-template-columns: 1fr;
-  }
+.guest-messages::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.guest-messages::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}
+
+.guest-messages::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Remove old guest-list styles */
+.guest-list {
+  display: none;
 }
 
 #bgMusic {

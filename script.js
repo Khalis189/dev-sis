@@ -7,30 +7,26 @@ function openInvitation() {
     alert('Please click the button again to play background music');
   });
 
-  // Sembunyikan intro dengan animasi fade out
-  document.getElementById('intro').style.opacity = '0';
-  document.getElementById('intro').style.pointerEvents = 'none';
-
-  setTimeout(() => {
-    document.getElementById('intro').style.display = 'none';
-  }, 1000); // setelah fade-out selesai
+  // Hide intro with animation
+  const intro = document.getElementById('intro');
+  const mainContent = document.getElementById('viewport-container');
   
-  // Menampilkan main-page dan section-two
-  document.getElementById('mainPage').classList.add('show');
-
-  // Menampilkan section-two setelah intro selesai (dengan delay)
+  intro.classList.add('hidden');
+  
+  // Show main content after intro animation
   setTimeout(() => {
-    document.querySelector('.section-two').style.display = 'flex';
-    document.querySelector('.section-two').classList.add('show');
-  }, 1000);
-
-  // Transisi main-page
-  setTimeout(() => {
+    mainContent.classList.add('visible');
     document.getElementById('mainPage').style.opacity = '1';
     document.getElementById('mainPage').style.pointerEvents = 'auto';
+    
+    // Show section-two after intro
+    setTimeout(() => {
+      document.querySelector('.section-two').style.display = 'flex';
+      document.querySelector('.section-two').classList.add('show');
+    }, 1000);
   }, 1000);
 
-  // Aktifkan scroll detection untuk mempelai setelah undangan dibuka
+  // Initialize scroll reveal after opening
   initScrollReveal();
 }
 
