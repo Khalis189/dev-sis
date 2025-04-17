@@ -1054,7 +1054,7 @@ body, html {
 
 .love-story-content {
   position: absolute;
-  top: 15%; /* Memposisikan konten jauh lebih ke atas */
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   padding: 40px;
@@ -1062,39 +1062,75 @@ body, html {
   width: 100%;
 }
 
-.love-story-title {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 64px;
-  color: white;
-  margin-bottom: 30px;
-  letter-spacing: 2px;
+/* Desktop/Laptop styles */
+@media screen and (min-width: 1024px) {
+  .love-story-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 42px; /* Reduced from 64px */
+    color: white;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+
+  .love-story-quote {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; /* Reduced from 18px */
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 15px;
+    max-width: 500px; /* Reduced from 600px */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .love-story-destiny {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px; /* Reduced from 24px */
+    color: black;
+    margin-top: 30px;
+  }
 }
 
-.love-story-quote {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  color: white;
-  margin-bottom: 20px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+/* Mobile styles */
+@media screen and (max-width: 1023px) {
+  .love-story-title {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 64px;
+    color: white;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+  }
+
+  .love-story-quote {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: white;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .love-story-destiny {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    color: black;
+    margin-top: 40px;
+  }
 }
 
-.love-story-destiny {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-weight: 300;
-  font-size: 24px;
-  color: black;
-  margin-top: 40px;
-}
-
+/* Small mobile styles */
 @media screen and (max-width: 600px) {
   .love-story-content {
-    top: 10%; /* Menyesuaikan untuk layar mobile */
     padding: 20px;
   }
 
@@ -1123,8 +1159,9 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   padding: 60px 20px;
   opacity: 0;
   transform: translateY(50px);
@@ -1143,6 +1180,51 @@ body, html {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.gallery-caption {
+  width: 100%;
+  text-align: center;
+  padding-top: 60px;
+  margin-top: auto;
+}
+
+.gallery-caption .couple-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 64px;
+  color: white;
+  margin-bottom: 15px;
+  font-weight: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-caption .memories-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  letter-spacing: 6px;
+  color: white;
+  font-weight: 300;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 600px) {
+  .section-eight {
+    padding: 40px 15px;
+  }
+
+  .gallery-caption {
+    padding-top: 40px;
+  }
+
+  .gallery-caption .couple-name {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+
+  .gallery-caption .memories-text {
+    font-size: 14px;
+    letter-spacing: 4px;
+  }
 }
 
 .gallery-row {
@@ -1813,4 +1895,37 @@ body, html {
 
 #bgMusic:hover {
   opacity: 1;
+}
+
+.gallery-caption {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.gallery-caption .couple-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  color: white;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.gallery-caption .memories-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  letter-spacing: 4px;
+  color: white;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 600px) {
+  .gallery-caption .couple-name {
+    font-size: 36px;
+  }
+
+  .gallery-caption .memories-text {
+    font-size: 14px;
+    letter-spacing: 3px;
+  }
 }
