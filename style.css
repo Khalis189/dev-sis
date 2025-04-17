@@ -1054,7 +1054,7 @@ body, html {
 
 .love-story-content {
   position: absolute;
-  top: 15%;
+  top: 8vh;
   left: 50%;
   transform: translateX(-50%);
   padding: 40px;
@@ -1068,7 +1068,7 @@ body, html {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 300;
-    font-size: 42px; /* Reduced from 64px */
+    font-size: 42px;
     color: white;
     margin-bottom: 20px;
     letter-spacing: 2px;
@@ -1076,11 +1076,11 @@ body, html {
 
   .love-story-quote {
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px; /* Reduced from 18px */
+    font-size: 16px;
     line-height: 1.6;
     color: white;
     margin-bottom: 15px;
-    max-width: 500px; /* Reduced from 600px */
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -1089,8 +1089,8 @@ body, html {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-weight: 300;
-    font-size: 20px; /* Reduced from 24px */
-    color: black;
+    font-size: 20px;
+    color: white;
     margin-top: 30px;
   }
 }
